@@ -38,3 +38,28 @@ nano .env #and put your access ip,user,pass
 ```bash
 sudo docker-compose up -d
 ```
+
+## Proxy for docker pull
+
+### Make docker proxy conf file
+```bash
+sudo mkdir -p /etc/systemd/system/docker.service.d
+sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
+```
+
+### Add localhost proxy to docker conf file
+Add these lines to http-proxy.conf file
+```bash
+[Service]
+Environment="HTTP_PROXY=socks5://127.0.0.1:1080/"
+```
+And reload daemon
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+### Check it
+```bash
+sudo docker pull hello-world
+```
