@@ -1,0 +1,16 @@
+version: '3'
+services:
+  sshtun:    
+    build: .
+    restart: always
+    hostname: "sshtun"
+    environment:
+      - SSH_IP=${SSH_IP}
+      - SSH_PORT=22
+      - SSH_USER=${SSH_USER}
+      - SSH_PASS=${SSH_PASS}
+      - LOCAL_PORT=1080
+    ports:
+      - "1080:1080"
+    stdin_open: true 
+    tty: true           
