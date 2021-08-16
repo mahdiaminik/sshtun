@@ -4,9 +4,9 @@ For those who have a remote ssh access and want to have a socks5 proxy
 
 ## Dependencies
 
-1- docker
-2- docker-compose
-3- git
+1- docker <br/>
+2- docker-compose <br/>
+3- git <br/>
 
 You can install latest version from https://docs.docker.com/get-docker/ or simply run :
 
