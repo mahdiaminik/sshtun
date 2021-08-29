@@ -6,7 +6,7 @@ services:
     hostname: "sshtun"
     environment:
       - SSH_IP=${SSH_IP}
-      - SSH_PORT=22
+      - SSH_PORT=${SSH_PORT}
       - SSH_USER=${SSH_USER}
       - SSH_PASS=${SSH_PASS}
       - LOCAL_PORT=1080
