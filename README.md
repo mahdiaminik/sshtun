@@ -52,6 +52,7 @@ Add these lines to http-proxy.conf file
 ```bash
 [Service]
 Environment="HTTP_PROXY=socks5://127.0.0.1:1080/"
+Environment="HTTPS_PROXY=socks5://127.0.0.1:1080/"
 ```
 And reload daemon
 ```bash
